@@ -103,14 +103,19 @@ public:
 int main() {
     Btree bt;
     int entries, searchValue;
+    cout<<"enter the number of entries"<<endl;
     cin >> entries;
+    cout<<"put the values to be inserted"<<endl;
     bt.inputData(entries);
+    cout<<"inorder traversal is"<<endl;
     bt.inorderTraversal();
+    cout<<"BFS TRAVERSAL IS"<<endl;
     bt.levelTraversal();
     cout << "Minimum Value: " << bt.findMin() << endl;
     bt.swapChildren();
     cout << "Tree after swapping children: ";
     bt.levelTraversal();
+    
     cin >> searchValue;
     cout << (bt.search(searchValue) ? "Found" : "Not Found") << endl;
     return 0;
